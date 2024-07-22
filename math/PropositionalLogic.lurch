@@ -1,0 +1,97 @@
+
+            <div id="loadlink">
+                <p><a>Open this file in the Lurch web app</a></p>
+                <script language="javascript">
+                    const link = document.querySelector( '#loadlink > p > a' )
+                    const thisURL = encodeURIComponent( window.location.href )
+                    link?.setAttribute( 'href', 'http://localhost:62940/app/?load=' + thisURL )
+                </script>
+            </div>
+        
+            <div id="metadata" style="display: none;"><div data-category="settings" data-key="shell style" data-value-type="json">"boxed"</div></div>
+            <div id="document"><h1>Rules for Propositional Logic</h1>
+<p>This example document is included in <a href="https://github.com/lurchmath/example-lurch-site/" target="_blank" rel="noopener">the Example Lurch Site repository</a> to show how you can create and use a document as a set of rules, imported into another document.&nbsp; It defines the rules for classical propositional logic.</p>
+<h2>Declarations of operator names</h2>
+<p>We must state which symbols are operators, so that they are treated as constants, and cannot be used for substitution in any of the rules below: <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Declare and, or, implies, not, iff, contradiction&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Declare and, or, </span><span class="ML__cmr">&rArr;</span><span class="ML__text">, </span><span class="ML__ams">&not;</span><span class="ML__text">, </span><span class="ML__cmr">&hArr;</span><span class="ML__text">, and </span><span class="ML__cmr">&rarr;&larr;</span></span></span></span></span>.</p>
+<h2>Rules for conjunction</h2>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Conjunction introduction:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span></span></span></span></span> is known and <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;if B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">if </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, we can also conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A and B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span><span class="ML__text"> and </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Conjunction elimination:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A and B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span><span class="ML__text"> and </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known (as a conjunction) then we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span> and can separately conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<h2>Rules for disjunction</h2>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Disjunction introduction:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span></span></span></span></span> is known, then we can add it to a disjunction as <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A or B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span><span class="ML__text"> or </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>, or the other way around, as <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B or A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span><span class="ML__text"> or </span><span class="ML__mathit">A</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Disjunction elimination:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A or B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span><span class="ML__text"> or </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, then we have two ways to proceed.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If not A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If not </span><span class="ML__mathit">A</span></span></span></span></span> is known, we can conclude that <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> must be true.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If not B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If not </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, we can conclude that <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span> must be true.</p>
+</div>
+</div>
+<h2>Rules for conditional</h2>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Conditional introduction:</p>
+<p>We begin by creating a subproof that shows our conditional to be true.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Assume A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Assume </span><span class="ML__mathit">A</span></span></span></span></span>.&nbsp; Then do whatever work is necessary to show <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<p>Based on a subproof of that form, we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A implies B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span><span class="ML__cmr">&rArr;</span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Conditional elimination:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A implies B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span><span class="ML__cmr">&rArr;</span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, and <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span> is also known, then we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<h2>Rules for negation and contradiction</h2>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Contradiction introduction:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span></span></span></span></span> is known and <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;if not A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">if not </span><span class="ML__mathit">A</span></span></span></span></span> is also known, then we have found a contradiction, written <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;contradiction&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__cmr">&rarr;&larr;</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Negation introduction:</p>
+<p>We create a subproof, reasoning towards a contradiction.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Assume A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Assume </span><span class="ML__mathit">A</span></span></span></span></span>.&nbsp; Then do whatever work is necessary to show a contradiction, <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;contradiction&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__cmr">&rarr;&larr;</span></span></span></span></span>.</p>
+</div>
+<p>Based on a subproof of that form, we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;not A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">not </span><span class="ML__mathit">A</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Negation elimination:</p>
+<p>This rule has a very similar structure to the previous one.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Assume not A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Assume not </span><span class="ML__mathit">A</span></span></span></span></span>.&nbsp; Then show a contradiction, <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;contradiction&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__cmr">&rarr;&larr;</span></span></span></span></span>.</p>
+</div>
+<p>Conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span>.</p>
+</div>
+<h2>Rules for biconditional</h2>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Biconditional introduction:</p>
+<p>This rule is just like conditional introduction, but in both directions, so it needs two subproofs, each the reverse of the other.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Assume A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Assume </span><span class="ML__mathit">A</span></span></span></span></span>.&nbsp; Then do some work to show <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;Assume B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">Assume </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.&nbsp; Then do some work to show <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span>.</p>
+</div>
+<p>From those two subproofs together, we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A iff B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span><span class="ML__cmr">&hArr;</span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;rule&quot;" data-shell_title="Rule:">
+<p>Biconditional elimination:</p>
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A iff B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span><span class="ML__cmr">&hArr;</span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, we can use it just like we would use a conditional, but in either of two directions.</p>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p><span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;If A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">If </span><span class="ML__mathit">A</span></span></span></span></span> is known, then we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span>.</p>
+</div>
+<div class="lurch-atom" data-metadata_type="&quot;premise&quot;" data-shell_title="">
+<p>Or instead <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;if B&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__text">if </span><span class="ML__mathit" style="margin-right: 0.06em;">B</span></span></span></span></span> is known, then we can conclude <span class="lurch-atom" contenteditable="false" data-metadata_type="&quot;expression&quot;" data-metadata_lurch-notation="&quot;A&quot;"><span class="lurch-atom-body"><span class="ML__latex"><span class="ML__base"><span class="ML__mathit">A</span></span></span></span></span>.</p>
+</div>
+</div>
+<p>&nbsp;</p></div>
+        

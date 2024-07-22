@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example Lurch Site Landing Page</title>
+        <link href="simple.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-container">
+            <h1>Example Lurch Site Landing Page</h1>
+            <h2>What's a Lurch Site?</h2>
+            <p>See <a href="http://lurchmath.github.io/site/what-is-a-lurch-site"
+                >this page in our documentation</a> to learn about Lurch Sites.
+                This page is part of an example Lurch Site to help you learn how
+                to create your own such site.</p>
+            <h2>What is this page?</h2>
+            <p>Most Lurch Sites will want a landing page.  This page is a simple
+                landing page, to show you how to create one.  Just place any
+                <code>.html</code> file in the root folder of your Lurch Site
+                repository.  You can even copy this one and use it as a starting
+                point.  (Its code is online
+                <a href="https://github.com/lurchmath/example-lurch-site/blob/main/index.html"
+                >here</a>.)</p>
+                <!-- If you copy this site, modify the URL above to contain your
+                     GitHub username and repository name. -->
+            <p>You can use just one file or many; it's up to you.  For more
+                information on what's possible with GitHub static site hosting,
+                <a href="">view their documentation</a>.</p>
+            <h2>What should my pages contain?</h2>
+            <p>Web pages in a Lurch Site typically do three things.</p>
+            <ol>
+                <li>Describe the site, such as which course or audience it is
+                    designed for, instructor contact information, etc.  How much
+                    of this you do and in what style is totally up to you.</li>
+                <li>Provide a link to the copy of the Lurch app that's hosted
+                    within the site.  You do so with a link
+                    <a href="./app/">like this example</a>.</li>
+                <li>Provide a link to open one or more of the mathematical
+                    documents within the site, opening them in the copy of the
+                    Lurch app that's hosted within the site.  We suggest putting
+                    such files in
+                    <a href="https://github.com/lurchmath/example-lurch-site/blob/main/math/"
+                    >the <code>/math</code> folder</a> that's already been
+                    created in this site for that purpose.  You can link to such
+                    files as shown below.</li>
+                    <!-- If you copy this site, modify the URL above to contain
+                         your GitHub username and repository name. -->
+                     <ul>
+                        <li>Example link 1:
+                            <a href="/app/?load=/math/PropositionalLogic.lurch"
+                            >Rules for propositional logic</a></li>
+                        <li>Example link 2:
+                            <a href="/app/?load=/math/PropositionalProofs.lurch"
+                            >A few uses of those rules in a proof</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>
