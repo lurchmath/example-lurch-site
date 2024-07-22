@@ -32,8 +32,17 @@
                     designed for, instructor contact information, etc.  How much
                     of this you do and in what style is totally up to you.</li>
                 <li>Provide a link to the copy of the Lurch app that's hosted
-                    within the site.  You do so with a link
-                    <a href="./app/">like this example</a>.</li>
+                    within the site.  You do so with links like these:
+                    <ul>
+                        <li><a href="/app/"
+                            >Lurch app in default (instructor) configuration</a></li>
+                        <li><a href="/app/?config=default-student"
+                            >Lurch app in student configuration</a></li>
+                        <li><a href="/app/?config=minimal-instructor"
+                            >Lurch app in minimal instructor configuration</a></li>
+                        <li><a href="/app/?config=minimal-student"
+                            >Lurch app in minimal student configuration</a></li>
+                    </ul>
                 <li>Provide a link to open one or more of the mathematical
                     documents within the site, opening them in the copy of the
                     Lurch app that's hosted within the site.  We suggest putting
@@ -44,7 +53,7 @@
                     files as shown below.</li>
                     <!-- If you copy this site, modify the URL above to contain
                          your GitHub username and repository name. -->
-                     <ul>
+                    <ul>
                         <li>Example link 1:
                             <a href="/app/?load=/math/PropositionalLogic.lurch"
                             >Rules for propositional logic</a></li>
@@ -53,6 +62,11 @@
                             >A few uses of those rules in a proof</a></li>
                     </ul>
                 </li>
+                <li>The links in the above examples use the
+                    <nobr><code>?config=</code></nobr> and
+                    <nobr><code>?load=</code></nobr> query parameters.
+                    You may combine those two parameters in the same URL, such as
+                    <nobr><code>?config=X&amp;load=Y</code></nobr>.</li>
             </ol>
         </div>
     </body>
