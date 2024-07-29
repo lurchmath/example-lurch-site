@@ -2,73 +2,114 @@
 <html>
     <head>
         <title>Example Lurch Site Landing Page</title>
-        <link href="simple.css" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
-    <body>
-        <div class="body-container">
-            <h1>Example Lurch Site Landing Page</h1>
-            <h2>What's a Lurch Site?</h2>
-            <p>See <a href="http://lurchmath.github.io/site/what-is-a-lurch-site"
-                >this page in our documentation</a> to learn about Lurch Sites.
-                This page is part of an example Lurch Site to help you learn how
-                to create your own such site.</p>
-            <h2>What is this page?</h2>
-            <p>Most Lurch Sites will want a landing page.  This page is a simple
-                landing page, to show you how to create one.  Just place any
+    <body style="padding-top: 1em">
+        <div class="container">
+            <h1 class="alert alert-dark">Example Lurch Site Landing Page</h1>
+            <h3 class="alert alert-primary">What's a Lurch Site?</h3>
+            <p><a href="http://lurchmath.github.io/site/what-is-a-lurch-site"
+                >Read the answer here.</a>  This Lurch Site is an example to
+                help you learn how to create your own.</p>
+            <h3 class="alert alert-primary">What is this page?</h3>
+            <p>This is a simple landing page to show you how to create a landing
+                page in your Lurch Site.  Feel free to copy it
+                (<a href="https://github.com/lurchmath/example-lurch-site/blob/main/index.html">code</a>)
+                as a starting point.</p>
+            <p>To add such a page to your site, just place any
                 <code>.html</code> file in the root folder of your Lurch Site
-                repository.  You can even copy this one and use it as a starting
-                point.  (Its code is online
-                <a href="https://github.com/lurchmath/example-lurch-site/blob/main/index.html"
-                >here</a>.)</p>
-                <!-- If you copy this site, modify the URL above to contain your
-                     GitHub username and repository name. -->
-            <p>You can use just one file or many; it's up to you.  For more
-                information on what's possible with GitHub static site hosting,
-                <a href="https://docs.github.com/en/pages">view their
-                documentation</a>.</p>
-            <h2>What should my pages contain?</h2>
-            <p>Web pages in a Lurch Site typically do three things.</p>
-            <ol>
-                <li>Describe the site, such as which course or audience it is
-                    designed for, instructor contact information, etc.  How much
-                    of this you do and in what style is totally up to you.</li>
-                <li>Provide a link to the copy of the Lurch app that's hosted
-                    within the site.  You do so with links like these:
-                    <ul>
-                        <li><a href="./app/"
-                            >Lurch app in default (instructor) configuration</a></li>
-                        <li><a href="./app/?config=default-student"
-                            >Lurch app in student configuration</a></li>
-                        <li><a href="./app/?config=minimal-instructor"
-                            >Lurch app in minimal instructor configuration</a></li>
-                        <li><a href="./app/?config=minimal-student"
-                            >Lurch app in minimal student configuration</a></li>
-                    </ul>
-                <li>Provide a link to open one or more of the mathematical
-                    documents within the site, opening them in the copy of the
-                    Lurch app that's hosted within the site.  We suggest putting
-                    such files in
-                    <a href="https://github.com/lurchmath/example-lurch-site/blob/main/math/"
-                    >the <code>/math</code> folder</a> that's already been
-                    created in this site for that purpose.  You can link to such
-                    files as shown below.</li>
+                repository.  The page that loads by default when a user visits
+                your site is <code>index.html</code>, like this one.  But you
+                can create multiple pages with links among them if you need.</p>
+            <!-- If you copy this site, modify the URL above to contain your
+                    GitHub username and repository name. -->
+            <p>For more information on what's possible with GitHub web hosting,
+                <a href="https://docs.github.com/en/pages">see here</a>.</p>
+            <h3 class="alert alert-primary">What should my pages say?</h3>
+            <p>Anything you like!  We suggest three things.</p>
+            <p><div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">1. Describe your Lurch Site</h5>
+                    <p class="card-text">Which course or audience it is
+                        designed for?  Who is the instructor?</p>
+                    <p>How much of this you include and in what style is totally
+                        up to you.</p>
+                </div>
+            </div></p>
+            <p><div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">2. Link to the app</h5>
+                    <p class="card-text">Provide a link to the copy of the Lurch
+                        app that's hosted within the site.  See the URLs used
+                        below as examples.</p>
+                    <div class="row">
+                        <div class="col">
+                            <p><a href="./app/" style="width: 100%"
+                                class="btn btn-primary">App in default mode for instructors</a></p>
+                        </div>
+                        <div class="col">
+                            <p><a href="./app/?config=default-student" style="width: 100%"
+                                class="btn btn-primary">App in default mode for students</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p><a href="./app/?config=minimal-instructor" style="width: 100%"
+                                class="btn btn-primary">App in minimal mode for instructors</a></p>
+                        </div>
+                        <div class="col">
+                            <p><a href="./app/?config=minimal-student" style="width: 100%"
+                                class="btn btn-primary">App in minimal mode for students</a></p>
+                        </div>
+                    </div>
+                    <p>The links above use the <code>config</code> query
+                        parameter.  To learn more about what that means, see
+                        <a href="https://github.com/lurchmath/example-lurch-site/blob/main/config/README.md">
+                        the README file</a> in this example repository's
+                        configuration folder.</p>
+                </div>
+            </div></p>
+            <p><div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">3. Link to your documents</h5>
+                    <p class="card-text">Provide links to open one or more of
+                        the mathematical documents within the site, opening them
+                        in the copy of the Lurch app that's hosted within the
+                        site.</p>
+                    <p>We suggest putting such files in
+                        <a href="https://github.com/lurchmath/example-lurch-site/blob/main/math/"
+                        >the <code>/math</code> folder</a> that's already been
+                        created in this site for that purpose.  If you do so,
+                        then links to your file look like the examples below.</p>
                     <!-- If you copy this site, modify the URL above to contain
                          your GitHub username and repository name. -->
-                    <ul>
-                        <li>Example link 1:
-                            <a href="./app/?load=../math/PropositionalLogic.lurch"
-                            >Rules for propositional logic</a></li>
-                        <li>Example link 2:
-                            <a href="./app/?load=../math/PropositionalProofs.lurch"
-                            >A few uses of those rules in a proof</a></li>
-                    </ul>
-                </li>
-                <li>The links in the above examples use the
-                    <nobr><code>?config=</code></nobr> and
-                    <nobr><code>?load=</code></nobr> query parameters.
-                    You may combine those two parameters in the same URL, such as
-                    <nobr><code>?config=X&amp;load=Y</code></nobr>.</li>
-            </ol>
+                    <div class="row">
+                        <div class="col">
+                            <p><a href="./app/?load=../math/PropositionalLogic.lurch" style="width: 100%"
+                                class="btn btn-primary">Rules for propositional logic</a></p>
+                        </div>
+                        <div class="col">
+                            <p><a href="./app/?load=../math/PropositionalProofs.lurch" style="width: 100%"
+                                class="btn btn-primary">A few uses of those rules in a proof</a></p>
+                        </div>
+                    </div>
+                    <p>The links above use the <code>load</code> query
+                        parameter.  You can use that parameter together with
+                        the <code>config</code> parameter mentioned earlier,
+                        as in <nobr><code>?config=X&amp;load=Y</code></nobr>.</p>
+                </div>
+            </div></p>
         </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous">
+        </script>
     </body>
 </html>
